@@ -1,0 +1,91 @@
+#include<stdio.h>
+int main()
+{
+    int row,col,numberofrows,numberofcol;
+    int A[10][10],B[10][10],C[10][10];
+
+
+    printf("Enter the Number of Row and cols: ");
+    scanf("%d %d",&numberofrows,&numberofcol);
+
+
+
+    // Scan Element for A matrix
+
+    printf("Enter Element for A matrix: \n");
+
+    for(row=0;row<numberofrows;row++)
+    {
+        for(col=0;col<numberofcol;col++)
+        {
+            printf("A[%d][%d] : ",row,col);
+            scanf("%d",&A[row][col]);
+        }
+        printf("\n");
+    }
+
+
+    printf(" \n \n Enter Element for B matrix: \n");
+
+    for(row=0;row<numberofrows;row++)
+    {
+        for(col=0;col<numberofcol;col++)
+        {
+            printf("B[%d][%d] : ",row,col);
+            scanf("%d",&B[row][col]);
+        }
+        printf("\n");
+    }
+
+
+       // printing A matrix
+
+    printf("A=");
+    for (row=0;row<numberofrows;row++)
+    {
+        printf("\t");
+        for(col=0;col< numberofcol;col++)
+        {
+            printf("%d ",A[row][col]);
+        }
+         printf("\n");
+    }
+
+
+    // printing B matrix
+
+    printf("\n B=");
+    for (row=0;row<numberofrows;row++)
+    {
+        printf("\t");
+        for(col=0;col<numberofcol;col++)
+        {
+            printf("%d ",B[row][col]);
+        }
+         printf("\n");
+    }
+
+    //ADDition A+B
+    for(row=0;row<numberofrows;row++)
+    {
+        for(col=0;col<numberofcol;col++)
+        {
+            C[row][col] = A[row][col] + B[row][col];
+        }
+    }
+    // printing C matrix
+
+
+
+
+    printf("\n A+B ");
+    for (row=0;row<numberofrows;row++)
+    {
+        printf("\t");
+        for(col=0;col<numberofcol;col++)
+        {
+            printf("%d ",C[row][col]);
+        }
+         printf("\n");
+}
+}
