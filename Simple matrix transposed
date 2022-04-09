@@ -1,0 +1,49 @@
+#include<stdio.h>
+int main()
+{
+    int A[10][10],transpose[10][10],numberofRows,numberofcols,row,col;
+
+    printf("Enter Number of Rows and Columns :");
+    scanf("%d%d",&numberofRows,&numberofcols);
+
+    for(row=0;row<numberofRows;row++)
+    {
+        for(col=0;col<numberofcols;col++)
+        {
+            printf("A[%d][%d]",row,col);
+            scanf("%d",&A[row][col]);
+        }
+        printf("\n");
+    }
+
+
+    printf(" Matrix A \n");
+    for(row=0;row<numberofRows;row++)
+    {
+        for(col=0;col<numberofcols;col++)
+        {
+            printf("%d ",A[row][col]);
+        }
+        printf("\n");
+    }
+
+    //transposed
+    for(row=0;row<numberofRows;row++)
+    {
+        for(col=0;col<numberofcols;col++)
+        {
+            transpose[col][row]=A[row][col];
+        }
+    }
+
+
+    printf(" Matrix of Transposed \n");
+    for(row=0;row<numberofcols;row++)
+    {
+        for(col=0;col<numberofRows;col++)
+        {
+            printf("%d ",transpose[row][col]);
+        }
+        printf("\n");
+    }
+}
