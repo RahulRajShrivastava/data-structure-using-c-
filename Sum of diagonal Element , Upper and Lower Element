@@ -1,0 +1,61 @@
+#include<stdio.h>
+int main()
+{
+    int A[10][10],numberofRows,numberofcols,row,col,diagonalsum=0,uppersum=0,lowesum=0;
+
+    printf("Enter Number of Rows and Columns :");
+    scanf("%d%d",&numberofRows,&numberofcols);
+
+    for(row=0;row<numberofRows;row++)
+    {
+        for(col=0;col<numberofcols;col++)
+        {
+            printf("A[%d][%d]",row,col);
+            scanf("%d",&A[row][col]);
+        }
+        printf("\n");
+    }
+
+
+    printf(" Matrix A \n");
+    for(row=0;row<numberofRows;row++)
+    {
+        for(col=0;col<numberofcols;col++)
+        {
+            printf("%d ",A[row][col]);
+        }
+        printf("\n");
+    }
+
+    // sum of diagonal element
+    for(row=0;row<numberofRows;row++)
+    {
+        printf("\n");
+        for(col=0;col<numberofcols;col++)
+        {
+            if(row==col)
+            {
+                printf("%d ",A[row][col]);
+                diagonalsum=diagonalsum+A[row][col];
+            }
+
+            if(row<col)
+            {
+                 printf("%d ",A[row][col]);
+                uppersum=uppersum+A[row][col];
+            }
+
+            printf("\n");
+            
+            if(row>col)
+            {
+                 printf("%d ",A[row][col]);
+                lowesum=lowesum+A[row][col];
+            }
+
+        }
+    }
+    printf(" \n Sum of Diagonal Element : %d",diagonalsum);
+    printf(" \n Sum of Diagonal Element : %d",uppersum);
+    printf(" \n Sum of Diagonal Element : %d",lowesum);
+}
